@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #adb2d4;
+    color: #4f959d;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 400px;
+    padding: 20px;
+    background: #c7d9dd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+input, button {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 5px;
+    border: 1px solid #d3bccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #b5a8d5;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #adb2d4;
+}
+
+#reminderList {
+    margin-top: 20px;
+    text-align: left;
+    background: #fff2f2;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.delete-btn {
+    background: #b5a8d5;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-icon {
+    width: 24px; 
+    height: 24px;
+}
+
+
+.notification {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    height: 20px;
+    width: 200px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow:hidden;
+    background: #ffccd5;
+    color: #6d597a;
+    padding: 20px;
+    font-weight: 500;
+    margin: 15px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-size-adjust: 20px ;
+}
