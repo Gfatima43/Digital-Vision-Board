@@ -21,23 +21,7 @@ function login() {
     let storedPassword = localStorage.getItem(username);
     if (storedPassword && storedPassword === password) {
         alert('Login successful!');
-        window.location.href = "index.html";
     } else {
         alert('Invalid credentials.');
     }
 }
-document.addEventListener("DOMContentLoaded", function () {
-    const sidebar = document.querySelector(".sidebar");
-    const toggle = document.querySelector(".toggle");
-    const h = document.querySelector(".h");
-    const home = document.querySelector(".home");
-    toggle.addEventListener("click", () => {
-      sidebar.classList.toggle("close");
-      home.classList.toggle("close");
-      h.classList.toggle("close");
-    });
-  });
-  function logout() {
-    alert("Logged out successfully!");
-    window.location.href = "index.html";
-  }
