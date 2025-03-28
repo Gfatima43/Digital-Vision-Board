@@ -3,18 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vision Board Reminder</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Reminders</title>
+    <link rel="stylesheet" href="reminderstyles.css">
+    <link rel="icon" href="favicon.jpg"> 
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="container">
-        <h2>Set a Reminder</h2>
-        <input type="date" id="reminderDate">
-        <input type="time" id="reminderTime">
-        <input type="text" id="reminderText" placeholder="Reminder details">
-        <button onclick="setReminder()">Remind Me</button>
-        <div id="reminderList"></div>
+  <header class="h">
+    <h1>Reminders & To-Do List:</h1>
+  </header>
+   
+  <nav class="sidebar">
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="logo.jpg" alt="logo">
+        </span>
+        <div class="text header-text">
+          <span class="name">Vivid Visions</span>
+          <span class="profession">Design, Manifest, Achieve</span>
+        </div>
+      </div>
+      <i class='bx bx-chevron-right toggle'></i>
+    </header>
+
+    <div class="menubar">
+      <div class="menu">
+        <ul class="menu-links">
+          <li class="nav-link">
+            <a href="index.html">
+              <i class='bx bx-home-heart icon'></i>
+              <span class="text nav-text">Home</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="dashboard.html">
+              <i class='bx bxs-dashboard icon'></i>
+              <span class="text nav-text">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="goals.html">
+              <i class='bx bx-target-lock icon'></i>
+              <span class="text nav-text">Goal Setting</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="reminder.html">
+              <i class='bx bx-bell icon'></i>
+              <span class="text nav-text">Reminder</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="gallery.html">
+              <i class='bx bx-images icon'></i>
+              <span class="text nav-text">Gallery</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="index.html#contacts">
+              <i class='bx bxs-contact icon'></i>
+              <span class="text nav-text">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom-content">
+        <li class="" onclick="logout()">
+            <a href="login.html">
+                <i class='bx bx-log-out icon'></i>
+                <span class="text nav-text">Logout</span>
+            </a>
+        </li>
     </div>
-    <script src="script.js"></script>
+    </div>
+  </nav>
+      <main class="home">
+       
+        <div class="main-container">
+          <div class="todo-container">
+              <h2>To-Do List</h2>
+              <input type="text" id="todoText" placeholder="Add a new task">
+              <button onclick="addTodo()">Add Task</button>
+              <ul id="todoList"></ul>
+          </div>
+          
+          <div class="reminder-container">
+              <h2>Set a Reminder</h2>
+              <input type="date" id="reminderDate">
+              <input type="time" id="reminderTime">
+              <input type="text" id="reminderText" placeholder="Reminder details">
+              <button onclick="setReminder()">Remind Me</button>
+              <div id="reminderList"></div>
+          </div>
+      </div>
+      </main>
+   
+    <script src="reminderscript.js"></script>
 </body>
 </html>
+
+
+
