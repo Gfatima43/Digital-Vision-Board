@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    * {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* === Color Variables === */
+    :root {
+    --body-color: #F9F7F3;
+    --sidebar-color: rgba(231, 222, 211, 0.9); /* Soft Beige with Glassmorphism */
+    --primary-color: #A58D79;
+    --primary-hover: #8B735D;
+    --text-color: #5C5047;
+    --toggle-color: #D2CBC4;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    }
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: var(--body-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .dashboard {
+            width: 90%;
+            /* max-width: 900px; */
+            background: rgba(231, 222, 211, 0.9);;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h2 {
+            margin: 0 0px 20px;
+            color: #452712;
+            background: var(--primary-hover);
+            font-family: 'Pacifico', cursive;
+            font-size: 35px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .input-area {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .input-area input,
+        .input-area button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .input-area input[type="text"] {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .input-area input[type="text"]  {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .input-area button {
+            padding: 10px;
+            border: none;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s, transform 0.2s;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+        .input-area button:hover {
+            background: var(--primary-hover);
+            transform: scale(1.1);
+        }
+        .vision-board {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20pxpx;
+        }
+        .vision-item {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .vision-item:hover {
+            transform: scale(1.05);
+        }
+        img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .remove-btn {
+            margin-top: 10px;
+            padding: 5px 10px;
+            border: none;
+            background: #d32f2f;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px){
+            .dashboard{
+                width: 100%;
+                padding: 15px;
+            }
+            h2{
+                font-size: 30px;
+            }
+            .input-area input[type="text"] {
+                min-width: 100%;
+                margin: 8px;
+            }
+            .vision-item{
+                margin: 10px;
+            }
+            img{
+                width: 80%;
+                height: 90px;
+            }
+        }

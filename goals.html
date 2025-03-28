@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goals Generate</title>
+  <link rel="icon" href="logo.jpg"> 
+  <link rel="stylesheet" href="goals.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <header class="h">
+    <h1>Goal Generate</h1>
+  </header>
+  <nav class="sidebar">
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="logo.jpg" alt="logo">
+        </span>
+        <div class="text header-text">
+          <span class="name">Vivid Visions</span>
+          <span class="profession">Design, Manifest, Achieve</span>
+        </div>
+      </div>
+      <i class='bx bx-chevron-right toggle'></i>
+    </header>
+
+    <div class="menubar">
+      <div class="menu">
+        <ul class="menu-links">
+          <li class="nav-link">
+            <a href="index.html">
+              <i class='bx bx-home-heart icon'></i>
+              <span class="text nav-text">Home</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="dashboard.html">
+              <i class='bx bxs-dashboard icon'></i>
+              <span class="text nav-text">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="goals.html">
+              <i class='bx bx-target-lock icon'></i>
+              <span class="text nav-text">Goal Setting</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="reminder.html">
+              <i class='bx bx-bell icon'></i>
+              <span class="text nav-text">Reminder</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="gallery.html">
+              <i class='bx bx-images icon'></i>
+              <span class="text nav-text">Gallery</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="index.html#contacts">
+              <i class='bx bxs-contact icon'></i>
+              <span class="text nav-text">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom-content">
+        <li onclick="logout()">
+            <a href="login.html">
+                <i class='bx bx-log-out icon'></i>
+                <span class="text nav-text">Logout</span>
+            </a>
+        </li>
+    </div>
+    </div>
+  </nav>
+  <main class="home" style="height:fit-content">
+    <div class="container">
+          <select id="goalCategory">
+              <option value="all">All Categories</option>
+              <option value="career">Career</option>
+              <option value="health">Health</option>
+              <option value="relationships">Relationships</option>
+              <option value="personal">Personal Growth</option>
+          </select>
+          <button onclick="generateGoal()">Generate Goal</button>
+
+          <h2>Your Goal</h2>
+          <p id="goalDisplay">Click "Generate Goal" to get a suggestion.</p>
+
+          <button onclick="saveGoal()">Save to Vision Board</button>
+
+          <ul id="goalList" class="draggable-list"></ul>
+
+          <h2 style="margin-top: 20px;">Saved Goals</h2>
+          <ul id="savedGoals"></ul>
+
+          <div class="goal-box">
+              <h2 style="margin-top: 20px;">Add Your Own Goal</h2>
+              <input type="text" id="customGoal" placeholder="Type your goal here...">
+              <input type="date" id="goalDeadline">
+              <button onclick="addCustomGoal()">Add Goal</button> <br>
+              <button><a href="dashboard.html" style="text-decoration: none; color: white;">Goal Progress</a></button>
+              <button><a href="visionboard.html" style="text-decoration: none; color: white;">Vision Board Add</a></button>
+          </div>
+  </div>
+  </main>
+    <script src="goals.js"></script>
+</body>
+</html>

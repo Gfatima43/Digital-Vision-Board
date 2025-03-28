@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <header class="h">
+    <h1>My Vision Dashboard</h1>
+  </header>
+  <nav class="sidebar">
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="logo.jpg" alt="logo">
+        </span>
+        <div class="text header-text">
+          <span class="name">Vivid Visions</span>
+          <span class="profession">Design, Manifest, Achieve</span>
+        </div>
+      </div>
+      <i class='bx bx-chevron-right toggle'></i>
+    </header>
+
+    <div class="menubar">
+      <div class="menu">
+        <ul class="menu-links">
+          <li class="nav-link">
+            <a href="index.html">
+              <i class='bx bx-home-heart icon'></i>
+              <span class="text nav-text">Home</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="dashboard.html">
+              <i class='bx bxs-dashboard icon'></i>
+              <span class="text nav-text">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="goals.html">
+              <i class='bx bx-target-lock icon'></i>
+              <span class="text nav-text">Goal Setting</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="reminder.html">
+              <i class='bx bx-bell icon'></i>
+              <span class="text nav-text">Reminder</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="gallery.html">
+              <i class='bx bx-images icon'></i>
+              <span class="text nav-text">Gallery</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="index.html#contacts">
+              <i class='bx bxs-contact icon'></i>
+              <span class="text nav-text">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom-content">
+        <li onclick="logout()">
+          <a href="login.html">
+            <i class='bx bx-log-out icon'></i>
+            <span class="text nav-text">Logout</span>
+          </a>
+        </li>
+      </div>
+    </div>
+  </nav>
+  <main class="home" style="height:fit-content">
+    <div class="dashboard">
+      <div class="dashboard-box">
+        <h3>Daily Tasks</h3>
+        <input type="text" class="todo-input" placeholder="Add new task" id="taskInput">
+        <ul class="todo-list" id="todoList"></ul>   
+      </div>
+      <div class="dashboard-box">
+        <h3>Goals Progress</h3>
+        <canvas id="progressChart" class="progress-chart"></canvas>
+      </div>
+      <div class="dashboard-box">
+        <h3>Active Goals</h3>
+        <div class="vision-board" id="activeGoals"></div>
+      </div>
+      <div class="dashboard-box">
+        <h3>Completed Goals</h3>
+        <div class="vision-board" id="completedGoals"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+
+</html>
